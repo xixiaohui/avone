@@ -1,0 +1,159 @@
+<div class="mychart">
+<section class="sizeChart-drawer__content">
+<div class="common-detail"><span>Switch To</span>
+<div class="sg-title-ctn">
+<ul class="sg-size-newTitle">
+<li da-event-click="1-6-1-25" data-unit="IN" class="title-active">IN</li>
+<li da-event-click="1-6-1-25" data-unit="CM" class="" style="border-left: none;">CM</li>
+</ul>
+</div>
+</div>
+<div class="size-table-outer">
+<div class="sg-table-t">
+<h6>Product Measurements</h6>
+</div>
+<div id="sg-table-ctn-1" data-type="cm-inh" class="sg-table-ctn scrollbar-inner sg-table-side">
+<table cellspacing="0" cellpadding="0" class="sg-table-base j-cm-table">
+<tbody>
+<tr class="cm-inch sg-table_tr">
+<td class="sg-table_td">Size</td>
+<td class="sg-table_td">US</td>
+<td class="sg-table_td">Ball Girth</td>
+<td class="sg-table_td">Foot Length</td>
+</tr>
+<tr class="sg-table_tr">
+<td class="sg-table_td">EUR36</td>
+<td class="sg-table_td">5.5</td>
+<td class="sg-table_td">8.3</td>
+<td class="sg-table_td">9.1</td>
+</tr>
+<tr class="sg-table_tr">
+<td class="sg-table_td">EUR37</td>
+<td class="sg-table_td">6.5</td>
+<td class="sg-table_td">8.5</td>
+<td class="sg-table_td">9.3</td>
+</tr>
+<tr class="sg-table_tr">
+<td class="sg-table_td">EUR38</td>
+<td class="sg-table_td">7.5</td>
+<td class="sg-table_td">8.7</td>
+<td class="sg-table_td">9.5</td>
+</tr>
+<tr class="sg-table_tr">
+<td class="sg-table_td">EUR39</td>
+<td class="sg-table_td">8</td>
+<td class="sg-table_td">8.8</td>
+<td class="sg-table_td">9.8</td>
+</tr>
+<tr class="sg-table_tr">
+<td class="sg-table_td">EUR40</td>
+<td class="sg-table_td">9</td>
+<td class="sg-table_td">9</td>
+<td class="sg-table_td">10</td>
+</tr>
+<tr class="sg-table_tr">
+<td class="sg-table_td">EUR41</td>
+<td class="sg-table_td">9.5</td>
+<td class="sg-table_td">9.1</td>
+<td class="sg-table_td">10.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sg-table-notice">* This data was obtained from manually measuring the product, it may be off by 1-2 CM.</div>
+<div class="measure-guide">
+<div class="measure-guide__header">
+<h6>How to Measure the Product's Size?</h6>
+</div>
+<div class="measure-guide__pic">
+<div class="measure-pic-guide">
+<div class="measure-wrap">
+<p><strong>1.Foot Length</strong></p>
+<p>Measure the maximum length of your foot.</p>
+</div>
+<div class="measure-wrap">
+<p><strong>2.Ball Girth</strong></p>
+<p>Wrap a tape to measure around the widest part of your foot.</p>
+</div>
+</div>
+<div class="common-sizemeasure__detail-pricture"><img class="pic" src="https://cdn.shopify.com/s/files/1/0579/2537/0021/files/size.png?v=1626759719" /></div>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+
+
+{% endstylesheet %}
+
+{% javascript %}
+let para = document.querySelectorAll('li[da-event-click]');
+para[1].addEventListener('click', updateDataCm);
+para[0].addEventListener('click', updateDataIn);
+
+
+function updateDataIn(e) {
+
+    if (para[0].classList.contains('title-active')) {
+        return;
+    }
+
+    para[1].classList.remove('title-active');
+    para[0].classList.add('title-active');
+
+    var tableId = document.querySelector(".sg-table-base");
+    var str = "";
+    for (var i = 1; i < tableId.rows.length; i++) {
+
+        let col = tableId.rows.item(0).cells.length;
+        for (var j = 2; j < col; j++) {
+
+            let number = tableId.rows[i].cells[j].textContent;
+            let newNumber = parseFloat(number) / 2.54;
+            newNumber = newNumber.toFixed(1);
+            tableId.rows[i].cells[j].textContent = newNumber;
+        }
+    }
+
+};
+
+
+function updateDataCm(e) {
+
+    if (para[1].classList.contains('title-active')) {
+        return;
+    }
+
+    para[1].classList.add('title-active');
+    para[0].classList.remove('title-active');
+
+
+    var tableId = document.querySelector(".sg-table-base");
+    var str = "";
+    for (var i = 1; i < tableId.rows.length; i++) {
+
+        let col = tableId.rows.item(0).cells.length;
+
+
+        for (var j = 2; j < col; j++) {
+
+            let number = tableId.rows[i].cells[j].textContent;
+            let newNumber = parseFloat(number) * 2.54;
+            newNumber = newNumber.toFixed(1);
+            tableId.rows[i].cells[j].textContent = newNumber;
+        }
+    }
+};
+{% endjavascript %}
