@@ -2,7 +2,7 @@
 <div>
   <ul>
     {% for collection in collections %}
-      {% if {{condition.title == "Flash Sale"}} %}
+      {% if collection.title == "Flash Sale"  %}
         {% paginate collection.products by 12 %}
           {% for product in collection.products %}
             <a href="{{ product.url}}">
