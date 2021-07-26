@@ -1,7 +1,8 @@
 
 <div>
   <ul>
-    {% for collection in collections["Flash Sale"] %}
+    {% for collection in collections %}
+      {% if {{condition.title == "Flash Sale"}} %}
         {% paginate collection.products by 12 %}
           {% for product in collection.products %}
             <a href="{{ product.url}}">
@@ -9,6 +10,7 @@
             </a>
           {% endfor %}
         {% endpaginate %}
+      {% endif %}
     {% endfor %}
     <li></li>
   </ul>
