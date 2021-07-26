@@ -1,7 +1,7 @@
 
 <div>
   <ul>
-    {% for collection in collections %}
+    {% for collection in collections["Flash Sale"] %}
         {% paginate collection.products by 12 %}
           {% for product in collection.products %}
             <a href="{{ product.url}}">
