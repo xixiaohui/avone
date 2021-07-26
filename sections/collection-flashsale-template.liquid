@@ -4,8 +4,6 @@
 
 {% capture title %}
     <div>
-
-        <h1>{{ section.settings.section_title}}</h1>
         <a href="">
             <img src="{{ section.settings.banner| img_url:'600x'}}">
         </a>
@@ -20,12 +18,13 @@
             <a href="{{ product.url }}">
                 <img src="{{ product.featured_image | img_url: '600x' }}">
             </a>
-            <p>{{ product.title }}</p>
-
+            <div>
+                <p>{{ product.title }}<span>{{ product.price }} </span></p>
+            </div>
+            
         </div>
     {% endfor %}
 </div>
-
 
 {% endpaginate %}
 

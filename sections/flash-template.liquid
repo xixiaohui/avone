@@ -1,3 +1,19 @@
+
+<div>
+  <ul>
+
+    {% for collection in collections %}
+        {% paginate collection.products by 12 %}
+          {% for product in collection.products %}
+            
+            <li>{{ product.title }}  - {{ product.price }}</li>
+          {% endfor %}
+        {% endpaginate %}
+    {% endfor %}
+    <li></li>
+  </ul>
+</div>
+
 {% schema %}
   {
     "name": "Section name",

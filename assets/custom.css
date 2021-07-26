@@ -1,26 +1,19 @@
-
 @media only screen and (max-width:767px) {
-	
-  #shopify-section-1625629395e51431a2 {
-   	
-    display:none;
-  }
+    #shopify-section-1625629395e51431a2 {
+        display: none;
+    }
 }
 
-
-.product-table tr:first-child{
- 
-  background: #F5F5F5;
+.product-table tr:first-child {
+    background: #F5F5F5;
 }
 
-.top-text-block{
-  
- text-align:left; 
+.top-text-block {
+    text-align: left;
 }
 
-button{
-  
- height:45px !important; 
+button {
+    height: 45px !important;
 }
 
 .nui-icon-medium-bag-filled-0 {
@@ -32,61 +25,47 @@ button{
     stroke: #fff;
 }
 
-svg.nui-icon.nui-icon-large-bag-filled  {
+svg.nui-icon.nui-icon-large-bag-filled {
     vertical-align: text-bottom;
     margin-right: 10px;
 }
 
-
-
-span#AddToCartText-product-template{
- 	
-  	vertical-align: text-bottom;
-  	font-size:15px;
+span#AddToCartText-product-template {
+    vertical-align: text-bottom;
+    font-size: 15px;
 }
 
-
-.shopify-payment-button__button{
-  font-weight: 700;
-  
+.shopify-payment-button__button {
+    font-weight: 700;
 }
 
-.swatch-element .swatchInput:checked + .swatchLbl {
+.swatch-element .swatchInput:checked+.swatchLbl {
     border: 2px solid #333;
 }
 
-
 .mfpbox {
     max-width: 1500px;
-
 }
 
 /***size chart start**/
 
-.mychart{
-
-
-    background-color:white;
+.mychart {
+    background-color: white;
 }
 
-
-.sg-table-t{
+.sg-table-t {
     padding-top: 1.32rem;
     padding-bottom: 1.32rem;
 }
 
-.sg-table-notice{
+.sg-table-notice {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
-
-.sizeChart-drawer__content{
-
+.sizeChart-drawer__content {
     background-color: #fff;
-
 }
-
 
 .common-detail {
     padding: 1.65rem 1.32rem;
@@ -94,9 +73,7 @@ span#AddToCartText-product-template{
     background-color: #eee;
 }
 
-
-
-.sg-title-ctn .sg-size-newTitle{
+.sg-title-ctn .sg-size-newTitle {
     border: 1px solid #222;
 }
 
@@ -117,12 +94,11 @@ li {
     width: 6.06rem;
 }
 
-.sg-title-ctn .sg-size-newTitle{
+.sg-title-ctn .sg-size-newTitle {
     display: -webkit-box;
-    display: flex; 
+    display: flex;
     display: -ms-flexbox;
 }
-
 
 .sg-size-newTitle {
     right: .64rem;
@@ -131,9 +107,7 @@ li {
     top: 50%;
 }
 
-
 .sg-table-base {
-    
     border: 1px solid #eee;
     text-align: center;
     width: 100%;
@@ -143,7 +117,6 @@ li {
 .sg-table-side {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-
     overflow-y: visible!important;
     overflow-x: auto;
 }
@@ -165,12 +138,13 @@ table {
     border-spacing: 0;
 }
 
-.sg-table_td{
+.sg-table_td {
     border: 1px solid #eee;
     height: 2rem;
-  	text-align: center;
+    text-align: center;
 }
-td.sg-table_td:first-child{
+
+td.sg-table_td:first-child {
     background: #f6f6f6;
 }
 
@@ -178,73 +152,70 @@ td.sg-table_td:first-child{
     width: 200px;
     display: inline-block;
 }
-.pic{
+
+.pic {
     width: 200px;
     display: inline-block;
 }
 
-
-
-h6{
+h6 {
     font-size: 1rem;
     margin: 0.5rem 0 0.5rem 0;
 }
 
-.measure-guide{
+.measure-guide {
     column-count: 2;
-
 }
 
-.sg-table_td{
+.sg-table_td {
     width: 25px;
 }
 
-.sg-table_td:hover{
+.sg-table_td:hover {
     background-color: #f6f6f6;
 }
 
 #sizechart th, #sizechart td {
-    text-align: center; 
+    text-align: center;
 }
 
-#sizechart{
-	text-align: left; 
+#sizechart {
+    text-align: left;
 }
 
-.measure-wrap{
-	margin: 0.5rem 0 0.5rem 0;
+.measure-wrap {
+    margin: 0.5rem 0 0.5rem 0;
 }
-p{
-	margin-block-start: 0;
+
+p {
+    margin-block-start: 0;
 }
+
 .rte li {
     list-style: none;
-  	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
-@media screen and (max-width:900px){
-    body{
+@media screen and (max-width:900px) {
+    body {
         font-size: 12px;
         background-color: #fff;
     }
-   
-    .mychart{
+    .mychart {
         width: 100%;
         margin: 0;
     }
-    .sizeChart-drawer__content{
+    .sizeChart-drawer__content {
         padding: 0;
     }
-    .sg-table-t{
+    .sg-table-t {
         padding-top: 0.32rem;
         padding-bottom: 0.32rem;
     }
-
-    .measure-guide{
+    .measure-guide {
         column-count: 1;
         padding-right: 0;
     }
-   
 }
 
 /***size chart end**/
