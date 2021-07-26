@@ -1,12 +1,12 @@
 
 <div>
   <ul>
-
     {% for collection in collections %}
         {% paginate collection.products by 12 %}
           {% for product in collection.products %}
-            
-            <li>{{ product.title }}  - {{ product.price }}</li>
+            <a href="{{ product.url}}">
+              <li>{{ product.title }}  - {{ product.price | money }}</li>
+            </a>
           {% endfor %}
         {% endpaginate %}
     {% endfor %}
